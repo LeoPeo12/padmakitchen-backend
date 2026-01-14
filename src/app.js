@@ -3,12 +3,9 @@ const app = express();
 
 app.use(express.json());
 
-const userRoutes = require("./routes/userRoutes");
+// routes
+const foodRoutes = require("./routes/foodRoutes");
 
-app.use("/api/users", userRoutes);
-
-app.get("/", (req, res) => {
-    res.send("API is running");
-});
+app.use("/api/foods", foodRoutes);
 
 module.exports = app;
